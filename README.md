@@ -29,7 +29,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repo contains a UI clone of the Tesla home page. I learned how to use the create-react-app and some basic react.JS concepts. I learned that react.JS allows us to deconstruct components like the Header, Body, and Footer. From my research, I noticed the sleek UI of the Tesla website to be a good example to replicate.
+This repo contains a Credit Card validator, and wallet.
 
 ![ScreenShot](https://github.com/nickcheng8888/Tesla-Replica/blob/master/src/assets/screenshotModelS.png)
 
