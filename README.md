@@ -29,7 +29,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repo contains a Credit Card validator, and wallet.
+User creates new customer by entering email address & password. After authentication, user can create new cards which are validated using the react-credit-cards library.
+After a card has been validated, it will be encrypted using their password and stored onto firebase through the backend. Users can access their cards through the 'Digital Wallet' button, and access all their cards stored.
 
 [Link to Screenshots](https://github.com/nickcheng8888/FullStackCreditCard/tree/main/client/assets).
 
