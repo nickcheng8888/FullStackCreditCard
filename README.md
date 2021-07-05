@@ -38,13 +38,28 @@ This repo contains a Credit Card validator, and wallet.
 * []() React.JS
 * []() Node.JS
 * []() CSS
+* []() Firebase
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Tasks Complete
 
-To get a local copy up and running follow these simple steps.
+Displays an active credit card.
+Real-time card number input with a max input limit of 16 digits.
+Card Number, Card Name, Expiration Date and CVV as real-time inputs.
+Storing the card details in a backend system using firebase.
+You also have to account for error handling, and.
+Your card MUST be able to recognise 'ALL' credit card brands. 
+User Authentication
+Card details pushed to backend with AES encryption
+No card details stored on Firebase
+    
+## Tasks To-do
+Mobile
+Deploy the website
+Store the backend on AWS
+Display only the current user's saved credit cards in the credit card storing functionality
 
 
 ### Prerequisites
