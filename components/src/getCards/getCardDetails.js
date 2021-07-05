@@ -13,12 +13,19 @@ function SnapshotFirebase(){
       cardSecurityCode: '',
   });
 
-  
-  useEffect(() => {
-      fetch("http://localhost:8080/api/getCards").then(async response => {
+  const [counter, setCounter] = useState(0);
+  const handleClick = async (e) => {
+    fetch("http://localhost:8080/api/getCards").then(async response => {
           try {
-           const data = await response.json()
-           await setDetails(data);
+           let data = await response.json();
+          //  console.log(data[counter].cardName);
+           setDetails({
+              ...details,
+              cardName: data[counter].cardName,
+              cardExpiration: data[counter].cardExpiration,
+              cardNumber: data[counter].cardNumber
+          })
+          setCounter(counter + 1);
            console.log('response data?', data)
          } catch(error) {
            console.log('Error happened here!')
@@ -26,8 +33,7 @@ function SnapshotFirebase(){
          }
         })
 
-  },[]);
-
+  }
 
   return (
     <div className="container">
@@ -37,7 +43,13 @@ function SnapshotFirebase(){
           name={details.cardName}
           number={details.cardNumber}
         />
+        <button className="btn btn-primary w-100 mt-3" onClick={handleClick}>Next Card</button>
+        <Link to="/addCard" className="btn btn-primary w-100 mt-3">
+            Add Cards
+          </Link>
+
         </div>
+        
       </div>
       
   );

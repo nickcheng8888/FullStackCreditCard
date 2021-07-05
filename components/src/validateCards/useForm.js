@@ -60,14 +60,13 @@ const useForm = () => {
      const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            let uid = await firebase.auth().currentUser.uid;
+            const uid = await firebase.auth().currentUser.uid;
             if(uid)
             {
-                setValues({
+                await setValues({
                     ...values,
                     userid: uid
                 })
-            setErrors(validateInfo(values, setValues))
 
             }
             else {
@@ -75,7 +74,10 @@ const useForm = () => {
            }
         } catch(e){
             console.log(e)
-        }   
+        }
+        if(values.userid){
+            setErrors(validateInfo(values, setValues))   
+        }
     };
 
     

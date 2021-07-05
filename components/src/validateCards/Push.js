@@ -10,7 +10,6 @@ export default function Push(values) {
       number: values.cardNumber,
       name: values.cardName,
       expiration: values.cardExpiration,
-      salt: values.salt,
       userID: values.userid
       });
 
