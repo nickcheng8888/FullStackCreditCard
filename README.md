@@ -31,17 +31,13 @@
 
 This repo contains a Credit Card validator, and wallet.
 
-![ScreenShot](https://github.com/nickcheng8888/FullStackCreditCard/blob/main/client/assets/FormScreenshot.png)
-
-![ScreenShot](https://github.com/nickcheng8888/FullStackCreditCard/blob/main/client/assets/FormReverseScreenshot.png)
-
-![ScreenShot](https://github.com/nickcheng8888/FullStackCreditCard/blob/main/client/assets/WalletScreenshot.png)
+[Link to Screenshots](https://github.com/nickcheng8888/FullStackCreditCard/tree/main/client/assets).
 
 ### Built With
 
 * []() React.JS
+* []() Node.JS
 * []() CSS
-* []() HTML
 
 
 
