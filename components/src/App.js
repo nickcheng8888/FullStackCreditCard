@@ -1,5 +1,6 @@
 // import CreditCardForm from "./validateCard/CreditCardForm";
-import getCard from "./getCardDetails";
+import getCard from "./getCards/getCardDetails";
+import addCard from "./validateCards/CreditCardForm"
 // import Login from "./loginComponents/Login"
 // import Signup from "./loginComponents/Signup"
 // import PrivateRoute from "./loginComponents/PrivateRoute"
@@ -18,6 +19,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/cards" component={CreditCardForm} /> */}
               <Route path="/getCard" component={getCard} />
+              <Route path="/cards" component={addCard} />
 
             </Switch>
         </Router>

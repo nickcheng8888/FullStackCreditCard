@@ -21,30 +21,23 @@ const getCards = async (req, res, next) => {
     try {
         // let uid = await firebase.auth().currentUser.uid;
         const cardArray = {};
-        var cardExpiry = '';
-        var cardName = '';
-        var cardNumber = '';
-        var userID = '123';
+        var hashedCard = ''
 
         let cardRef = await firestore.collection('creditCard')
         // .where('cardName', '==', 'Nick')
         .get()
         .then(function(querySnapshot) {
-            const currCard = {};
             querySnapshot.forEach(function(doc) {
-                cardExpiry = doc.data().cardExpiry;
-                cardName = doc.data().cardName;
-                cardNumber = doc.data().cardNumber;
+                    cardArray.cardNumber = doc.data().number;
+                    cardArray.cardExpiry = doc.data().expiry;
+                    cardArray.cardName = doc.data().name;
+
+
+                
                 
             });
-            // console.log(cardExpiry);
-            // console.log(cardName);
-            // console.log(cardNumber);
-            cardArray.cardNumber = cardNumber;
-            cardArray.cardName = cardName;
-            cardArray.cardExpiry = cardExpiry;
-            console.log(cardArray);
         })
+        console.log(cardArray);
         //append object to cardarray
         res.send(cardArray)
     } catch (error) {
