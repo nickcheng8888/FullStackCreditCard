@@ -37,7 +37,7 @@ After a card has been validated, it will be encrypted using their password and s
 ### Built With
 
 * []() React.JS
-* []() Node.JS
+* []() Javascript
 * []() CSS
 * []() Firebase
 
