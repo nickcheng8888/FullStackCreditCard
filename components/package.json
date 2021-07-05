@@ -1,0 +1,63 @@
+{
+  "homepage": "/signup",
+  "name": "credit_card",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@mapbox/node-pre-gyp": "^1.0.5",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/bcrypt": "^5.0.0",
+    "aws-sdk": "^2.937.0",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.0",
+    "card-validator": "^8.1.0",
+    "jquery": "^1.9.1",
+    "mock-aws-s3": "^4.0.2",
+    "nock": "^13.1.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-credit-cards": "^0.8.3",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.3.5",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!index.js",
+      "!App.js"
+    ]
+  }
+}
