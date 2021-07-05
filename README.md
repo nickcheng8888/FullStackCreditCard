@@ -31,9 +31,11 @@
 
 This repo contains a Credit Card validator, and wallet.
 
-![ScreenShot](https://github.com/nickcheng8888/Tesla-Replica/blob/master/src/assets/screenshotModelS.png)
+![ScreenShot](https://github.com/nickcheng8888/FullStackCreditCard/blob/main/client/assets/FormScreenshot.png)
 
-![ScreenShot](https://github.com/nickcheng8888/Tesla-Replica/blob/master/src/assets/screenshotSolarRoof.png)
+![ScreenShot](https://github.com/nickcheng8888/FullStackCreditCard/blob/main/client/assets/FormReverseScreenshot.png)
+
+![ScreenShot](https://github.com/nickcheng8888/FullStackCreditCard/blob/main/client/assets/WalletScreenshot.png)
 
 ### Built With
 
