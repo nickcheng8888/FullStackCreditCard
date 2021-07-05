@@ -79,9 +79,9 @@ export default function validateInfo(values, setValues) {
   ) {
     errors.variant = "success";
     errors.message = "Storing credit card...";
-    // const hash = generateCipher(values, values.ccvv);
+    const hash = generateCipher(values, values.ccvv);
     // console.log(hash.toString());
-    Push(values);
+    Push(hash);
   }
 
   return errors;

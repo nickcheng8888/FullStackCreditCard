@@ -27,18 +27,16 @@ const getCards = async (req, res, next) => {
         .then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
                     const card = {};
+                    // card.cardNumber = doc.data().number;
+                    // card.cardExpiry = doc.data().expiration;
+                    // card.cardName = doc.data().name;
                     // card.userID = doc.data().userID;
-                    card.cardNumber = doc.data().number;
-                    card.cardExpiry = doc.data().expiration;
-                    card.cardName = doc.data().name;
-                    card.userID = doc.data().userID;
-                    //res.send(card)
+                    card.encryptedCreditCard = doc.data().encryptedCreditCard;
                     cardArray.push(card);
                 
             });
         })
         res.send(cardArray);
-        // console.log(cardArray);
         //append object to cardarray
     } catch (error) {
         res.status(400).send(error.message);

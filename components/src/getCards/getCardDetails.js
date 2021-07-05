@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import 'react-credit-cards/es/styles-compiled.css'
+import decipher from "./decrypt";
 
 function SnapshotFirebase(){
 
@@ -18,12 +19,20 @@ function SnapshotFirebase(){
     fetch("http://localhost:8080/api/getCards").then(async response => {
           try {
            let data = await response.json();
-          //  console.log(data[counter].cardName);
-           setDetails({
+           const hashedNumber = data[counter].encryptedCreditCard;
+          console.log(hashedNumber);
+          const unhashed = decipher(hashedNumber);
+          const values = JSON.parse(unhashed);
+
+            console.log(values.cardNumber);
+            console.log(values.cardExpiration);
+            console.log(values.cardName);
+
+           setDetails({ 
               ...details,
-              cardName: data[counter].cardName,
-              cardExpiration: data[counter].cardExpiration,
-              cardNumber: data[counter].cardNumber
+              cardName: values.cardName,
+              cardExpiration: values.cardExpiration,
+              cardNumber: values.cardNumber
           })
           setCounter(counter + 1);
            console.log('response data?', data)
@@ -39,7 +48,7 @@ function SnapshotFirebase(){
     <div className="container">
       <div className="creditCard">
         <Cards
-          expiry={details.cardExpiry}
+          expiry={details.cardExpiration}
           name={details.cardName}
           number={details.cardNumber}
         />

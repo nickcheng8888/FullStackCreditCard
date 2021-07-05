@@ -6,9 +6,8 @@ import CryptoENC from 'crypto-js/enc-utf8';
 
 //generate hash
 function decipher(hash, password) {
-    const value = JSON.parse(CryptoENC.stringify(CryptoAES.decrypt(hash,  'secret key 123')));
-    // console.log(value);
-  return hash;
+    const value = CryptoENC.stringify(CryptoAES.decrypt(hash,  'secret key 123'));
+  return value;
 }
 
 export default decipher;
