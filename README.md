@@ -61,6 +61,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/nickcheng8888/FullStackCreditCard.git
    ```
+2. Add API Keys for Firebase in the files client/.env and server/.env
 2. Install NPM packages
    ```sh
    cd client
@@ -75,6 +76,13 @@ This is an example of how to list things you need to use the software and how to
    npm install
    ```
 3. Launch the server
+  ```sh
+   cd server
+   ```
+   ```sh
+   npm start
+   ```
+4. Launch the client
   ```sh
    cd client
    ```
